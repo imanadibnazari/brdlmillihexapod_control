@@ -1,0 +1,79 @@
+brdlmillihexapod:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50  
+  
+  # Position Controllers ---------------------------------------
+  torso__leg1_link1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: torso__leg1_link1
+    pid: {p: 0.01, i: 0.0, d: 0.0}
+  leg1_link1__leg1_link2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: leg1_link1__leg1_link2
+    pid: {p: 0.01, i: 0.0, d: 0.0}
+  leg1_link2__leg1_link3_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: leg1_link2__leg1_link3
+    pid: {p: 0.01, i: 0.0, d: 0.0}
+  torso__leg2_link1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: torso__leg2_link1
+    pid: {p: 0.01, i: 0.0, d: 0.0}
+  leg2_link1__leg2_link2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: leg2_link1__leg2_link2
+    pid: {p: 0.01, i: 0.0, d: 0.0}
+  leg2_link2__leg2_link3_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: leg2_link2__leg2_link3
+    pid: {p: 0.01, i: 0.0, d: 0.0}
+  torso__leg3_link1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: torso__leg3_link1
+    pid: {p: 0.01, i: 0.0, d: 0.0}
+  leg3_link1__leg3_link2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: leg3_link1__leg3_link2
+    pid: {p: 0.01, i: 0.0, d: 0.0}
+  leg3_link2__leg3_link3_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: leg3_link2__leg3_link3
+    pid: {p: 0.01, i: 0.0, d: 0.0}
+  torso__leg4_link1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: torso__leg4_link1
+    pid: {p: 0.01, i: 0.0, d: 0.0}
+  leg4_link1__leg4_link2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: leg4_link1__leg4_link2
+    pid: {p: 0.01, i: 0.0, d: 0.0}
+  leg4_link2__leg4_link3_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: leg4_link2__leg4_link3
+    pid: {p: 0.01, i: 0.0, d: 0.0}
+  torso__leg5_link1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: torso__leg5_link1
+    pid: {p: 0.01, i: 0.0, d: 0.0}
+  leg5_link1__leg5_link2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: leg5_link1__leg5_link2
+    pid: {p: 0.01, i: 0.0, d: 0.0}
+  leg5_link2__leg5_link3_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: leg5_link2__leg5_link3
+    pid: {p: 0.01, i: 0.0, d: 0.0}
+  torso__leg6_link1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: torso__leg6_link1
+    pid: {p: 0.01, i: 0.0, d: 0.0}
+  leg6_link1__leg6_link2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: leg6_link1__leg6_link2
+    pid: {p: 0.01, i: 0.0, d: 0.0}
+  leg6_link2__leg6_link3_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: leg6_link2__leg6_link3
+    pid: {p: 0.01, i: 0.0, d: 0.0}

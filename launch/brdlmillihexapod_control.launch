@@ -1,0 +1,15 @@
+<launch>
+
+  <rosparam file="$(find brdlmillihexapod_control)/config/brdlmillihexapod_control.yaml" command="load"/>
+
+
+    <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" ns="/brdlmillihexapod" args=" torso__leg1_link1_position_controller leg1_link1__leg1_link2_position_controller leg1_link2__leg1_link3_position_controller torso__leg2_link1_position_controller leg2_link1__leg2_link2_position_controller leg2_link2__leg2_link3_position_controller torso__leg3_link1_position_controller leg3_link1__leg3_link2_position_controller leg3_link2__leg3_link3_position_controller torso__leg4_link1_position_controller leg4_link1__leg4_link2_position_controller leg4_link2__leg4_link3_position_controller torso__leg5_link1_position_controller leg5_link1__leg5_link2_position_controller leg5_link2__leg5_link3_position_controller torso__leg6_link1_position_controller leg6_link1__leg6_link2_position_controller leg6_link2__leg6_link3_position_controller joint_state_controller"/>
+    
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="false" output="screen">
+    <remap from="/joint_states" to="/brdlmillihexapod/joint_states" />
+  </node>
+
+</launch>
